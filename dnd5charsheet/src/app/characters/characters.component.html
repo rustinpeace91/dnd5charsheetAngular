@@ -1,0 +1,17 @@
+<p>
+  characters works!
+</p>
+<ul class="characters">
+  <li 
+  *ngFor="let character of characters" 
+  [class.selected]="character === selectedCharacter"
+  (click)="onSelect(character)">
+    <span class="badge">{{character.id}}</span>{{character.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedCharacter">
+  <h2>{{selectedCharacter.name}} Details</h2>
+  <p>Level:{{selectedCharacter.level}}</p>
+  <p>Class:{{selectedCharacter.char_class}}</p>
+</div>
