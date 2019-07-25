@@ -18,6 +18,6 @@ export class CharacterService {
   ) { }
 
   getCharacters(): Observable<Character[]> {
-    return this.http.get<Character[]>(this.charactersUrl)
+    return this.http.get<Character[]>(this.charactersUrl);
   }
 }
