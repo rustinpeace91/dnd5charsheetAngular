@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Character } from './character';
-import { CHARACTERS } from './mock-characters';
+import { environment } from '../environments/environment';
 
 import { Observable, of } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class CharacterService {
-  private charactersUrl = 'http://localhost:3000/cars';
+  private charactersUrl = environment.Url + '/characters';
 
   constructor(
     private http: HttpClient,

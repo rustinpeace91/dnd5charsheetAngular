@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CHARACTERS } from '../mock-characters';
 
 @Component({
   selector: 'app-charsheet',
