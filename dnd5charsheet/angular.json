@@ -63,6 +63,9 @@
           "configurations": {
             "production": {
               "browserTarget": "dnd5charsheet:build:production"
+            },
+            "djangodev": {
+              "browserTarget": "dnd5charsheet:build:djangodev"
             }
           }
         },
