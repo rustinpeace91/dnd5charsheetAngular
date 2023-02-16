@@ -14,8 +14,36 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CharactersComponent implements OnInit {
 
-  characters: Character[];
-  selectedCharacter: Character;
+  characters: Character[] = [
+    new Character(
+      0,
+      0,
+      '',
+      '',
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      '',
+      ''
+    )
+  ]
+  selectedCharacter: Character = new Character(
+    0,
+    0,
+    '',
+    '',
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    '',
+    ''
+  )
   form: FormGroup = new FormGroup({})
 
 
@@ -31,9 +59,10 @@ export class CharactersComponent implements OnInit {
   }
   onSelect(character: Character): void {
     this.selectedCharacter = character;
+    console.log(character)
     let keys = Object.keys(character)
     keys.forEach(k=>{
-      this.form.addControl(k, new FormControl(character[k]))
+      this.form.addControl(k, new FormControl(character[k as keyof Character]))
     })
 
   }

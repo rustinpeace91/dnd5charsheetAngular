@@ -14,18 +14,18 @@ export class Character {
     description: string;
 
     constructor(
-        id,
-        level,
-        name,
-        char_class,
-        strength,
-        dexterity,
-        constitution,
-        intelligence,
-        wisdom,
-        charisma,
-        image,
-        description
+        id: number,
+        level: number,
+        name: string,
+        char_class: string,
+        strength: number,
+        dexterity: number,
+        constitution: number,
+        intelligence: number,
+        wisdom: number,
+        charisma: number,
+        image: string,
+        description: string
     ){
         this.id= id;
         this.level= level;
