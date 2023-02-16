@@ -10,8 +10,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedCharacter">
-  <h2>{{selectedCharacter.name}} Details</h2>
-  <p>Level:{{selectedCharacter.level}}</p>
-  <p>Class:{{selectedCharacter.char_class}}</p>
-</div>
+<app-charsheet [character]="selectedCharacter" [form]="form"></app-charsheet>

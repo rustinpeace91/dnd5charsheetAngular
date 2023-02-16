@@ -28,7 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # TODO LIST
-- impliment character sheet as a seperate component 
 - impliment Reactive form as part of character sheet using two way binding
 - use seperate dynamic form to use character input 
 - attempt to upgrade to Angular 14
