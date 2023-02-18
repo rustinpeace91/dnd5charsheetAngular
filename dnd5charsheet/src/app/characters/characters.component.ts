@@ -60,6 +60,7 @@ export class CharactersComponent implements OnInit {
   onSelect(character: Character): void {
     this.selectedCharacter = character;
     console.log(character)
+    this.form = new FormGroup({})
     let keys = Object.keys(character)
     keys.forEach(k=>{
       this.form.addControl(k, new FormControl(character[k as keyof Character]))
