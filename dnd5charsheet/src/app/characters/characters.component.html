@@ -2,12 +2,18 @@
   characters works!
 </p>
 <ul class="characters">
-  <li 
-  *ngFor="let character of characters" 
-  [class.selected]="character === selectedCharacter"
-  (click)="onSelect(character)">
-    <span class="badge">{{character.id}}</span>{{character.name}}
-  </li>
+    <div 
+    *ngFor="let character of characters" 
+    [class.selected]="character === selectedCharacter"
+    (click)="onSelect(character)">
+      <a routerLink="/character/{{character.id}}">
+        <li>
+          <span class="badge">{{character.id}}</span>{{character.name}}
+
+        </li>
+      </a>
+
+    </div>
 </ul>
 
-<app-charsheet [character]="selectedCharacter" [form]="form"></app-charsheet>
+<!-- <app-charsheet [character]="selectedCharacter" [form]="form"></app-charsheet> -->

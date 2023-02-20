@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CharactersComponent } from './characters/characters.component';
+import { CharsheetComponent } from './charsheet/charsheet.component';
 
 // import { DashboardComponent } from './dashboard/dashboard.component';
 // import { HeroesComponent } from './heroes/heroes.component';
@@ -7,8 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/characters', pathMatch: 'full' },
-//   { path: 'dashboard', component: DashboardComponent },
-//   { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'characters', component: CharactersComponent },
+  { path: 'character/:id', component: CharsheetComponent },
 //   { path: 'heroes', component: HeroesComponent }
 ];
 
@@ -17,5 +19,3 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
-
-
