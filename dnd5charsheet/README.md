@@ -29,7 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # TODO LIST
 - impliment bootstrap 
-- Scrap dynamic form 
 - build out data
     - Sheet should have the following fields
         - ability scores
