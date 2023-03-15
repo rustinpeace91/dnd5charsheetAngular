@@ -28,7 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # TODO LIST
-- make form truly dynamic
-- fix inability to change character bug
 - impliment bootstrap 
+- Scrap dynamic form 
 - build out data
+    - Sheet should have the following fields
+        - ability scores
+        - ability score bonuses (calculated reactively by app)
+        - class
+        - Hit die (calculated reactively by class)
+        - Race (adds ability score bonuses reactively)
