@@ -2,5 +2,10 @@
 <p>Charsheet WORKS</p>
 <div *ngIf="character">
   <h2>{{character.name}}</h2>
+  <div *ngFor="let score of ability_scores">
+    <label for="points">{{score}}</label>
+    <input type="number" id="points" name="points">
+  </div>
+  
   <button (click)="printForm()">Print Form</button>
 </div>

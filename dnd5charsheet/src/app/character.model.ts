@@ -1,11 +1,11 @@
 
 export class Character {
-
+    [key: string]: any;
     constructor(
         public id: number,
         public level: number,
         public name: string,
-        public char_class: string,
+        public charClass: string,
         public strength: number,
         public dexterity: number,
         public constitution: number,
