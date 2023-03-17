@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CharsheetComponent } from './charsheet/charsheet.component';
 
 // import { DashboardComponent } from './dashboard/dashboard.component';
 // import { HeroesComponent } from './heroes/heroes.component';
@@ -7,8 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/characters', pathMatch: 'full' },
-//   { path: 'dashboard', component: DashboardComponent },
-//   { path: 'detail/:id', component: HeroDetailComponent },
+  // { path: 'charactersheet/:id', component: CharsheetComponent },
 //   { path: 'heroes', component: HeroesComponent }
 ];
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../character.service';
-import { Character } from '../character';
+import { Character } from '../character.model';
 import { Observable, of } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -30,20 +30,7 @@ export class CharactersComponent implements OnInit {
       ''
     )
   ]
-  selectedCharacter: Character = new Character(
-    0,
-    0,
-    '',
-    '',
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    '',
-    ''
-  )
+  selectedCharacter!: Character;
   form: FormGroup = new FormGroup({})
 
 

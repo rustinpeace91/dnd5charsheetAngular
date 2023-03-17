@@ -1,11 +1,6 @@
 
-
+<p>Charsheet WORKS</p>
 <div *ngIf="character">
-  <div [formGroup]="form">
-    <div *ngFor="let field of fields">
-      <label [attr.for]="field">{{field}}:</label>
-      <input formControlName="{{field}}">
-    </div>
-  </div>
+  <h2>{{character.name}}</h2>
   <button (click)="printForm()">Print Form</button>
 </div>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { Character } from '../character';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Character } from '../character.model';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -25,19 +25,37 @@ export class CharsheetComponent implements OnInit {
     ''
   )
 
+  ability_scores = [
+    'strength',
+    'dexterity', 
+    'constitution', 
+    'intelligence', 
+    'wisdom', 
+    'charisma'
+  ]
+  characterForm: FormGroup = new FormGroup({
+    strength: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    dexterity: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    constitution: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    intelligence: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    wisdom: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    charisma: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
+    class: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]*$')]),
+    race: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]*$')]),
+    level: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$]')])
+  });
 
-  @Input() form: FormGroup = new FormGroup({})
-  fields: any[] = []
+  hitDie: string = 'D4';
+  HP: number = 0;
+
   constructor() { }
 
   ngOnInit() {
     
   }
-  ngOnChanges() {
-    this.fields = Object.keys(this.form.value)
-  }
+
   printForm(){
-    console.log(this.form.value)
+    console.log(this.characterForm.value)
   }
 
 }

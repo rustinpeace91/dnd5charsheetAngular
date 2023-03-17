@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Character } from './character';
+import { Character } from './character.model';
 import { environment } from '../environments/environment';
 
 import { Observable, of } from 'rxjs';
@@ -11,7 +11,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class CharacterService {
-  private charactersUrl = environment.Url + '/characters';
+  private charactersUrl = '/assets/chars.json';
 
   constructor(
     private http: HttpClient,
